@@ -34,6 +34,9 @@ class $className {\n
   }
 
   String _formatFiledName(String path) {
+    if(path.startsWith('.')){
+      path.replaceFirst('.', '');
+    }
     path = path
         .replaceAll('/', '_')
         .replaceAll('.', '_')
