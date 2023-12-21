@@ -34,15 +34,10 @@ class $className {\n
   }
 
   String _formatFiledName(String path) {
-    if(path.startsWith('.')){
-      path.replaceFirst('.', '');
+    if (path.startsWith('.')) {
+      path = path.replaceFirst('.', '');
     }
-    path = path
-        .replaceAll('/', '_')
-        .replaceAll('.', '_')
-        .replaceAll(' ', '_')
-        .replaceAll('-', '_')
-        .replaceAll('@', '_AT_');
+    path = path.replaceAll('/', '_').replaceAll('.', '_').replaceAll(' ', '_').replaceAll('-', '_').replaceAll('@', '_AT_');
     return path.toUpperCase();
   }
 
